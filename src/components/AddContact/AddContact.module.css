@@ -1,0 +1,19 @@
+.formControl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formControl input{
+    margin-bottom: 15px;
+    margin-left: 5px;
+    padding: 4px 12px;
+    height: 30px;
+    width: 200px;
+}
+.formControl label{
+   margin-top: -15px;
+}
+.addContact{
+    padding: 4px 12px;
+    margin-bottom: 20px;
+}
