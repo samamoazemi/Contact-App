@@ -1,20 +1,21 @@
 import { useState } from "react";
 import style from "./AddContact.module.css";
 
-const AddContact = () => {
+const AddContact = ({addContactHandler}) => {
     const[contact, setContact] = useState({name: "", email:""});
 
     const changeHandler = (e) => {
         setContact({...contact,[e.target.name]: e.target.value})
     }
-    
-    const addContactHandler = (e) => {
-        e.preventDefault();
-        console.log("clicked")
-    }
 
+    const submitForm = (e) => {
+        e.preventDefault();
+        addContactHandler(contact)
+        setContact({name: "", email: ""});
+    }
+    
     return ( 
-        <form onSubmit={addContactHandler}>
+        <form onSubmit={submitForm}>
             <div className={style.formControl}>
                 <label>name</label>
                 <input 
