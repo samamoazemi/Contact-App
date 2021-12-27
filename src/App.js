@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
@@ -18,8 +19,11 @@ function App() {
   }
 
   useEffect(() => {
-    const savedContacts = JSON.parse(localStorage.getItem("contacts"));
-    if(savedContacts) setContacts(savedContacts);
+    const getContacts = async () => {
+      const { data } = await axios.get("http://localhost:3001/contacts");
+      setContacts(data);
+    }
+    getContacts();
   }, []);
 
   useEffect(() => {
