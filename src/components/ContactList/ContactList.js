@@ -5,8 +5,8 @@ import style from "./ContactList.module.css";
 const ContactList = ({ contacts, onDelete }) => {
     return (
         <section>
-          <div>
-            <h2>Contacts</h2>
+          <div className={style.listHeader}>
+            <h2>Contact List</h2>
             <Link to="/Add">
             <button className={style.addNewData}>Add</button>
             </Link>
