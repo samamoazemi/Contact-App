@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import style from "./ContactList.module.css";
 
 const ContactList = ({ contacts, onDelete }) => {
     return (
-        <>
+        <section>
+          <div>
+            <h2>Contacts</h2>
+            <Link to="/Add">
+            <button className={style.addNewData}>Add</button>
+            </Link>
+          </div>
           {contacts.map((contact) => {
               const{ name, email, id } = contact
               return(
@@ -16,7 +23,7 @@ const ContactList = ({ contacts, onDelete }) => {
               
               )
           })}
-        </>
+        </section>
     );
 }
  
