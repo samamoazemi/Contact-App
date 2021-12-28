@@ -1,22 +1,22 @@
-.listHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    margin-top: 20px;
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 20px;
+  width: 26rem;
 }
-h2{
-    padding: 15px 0;
-    color: #444;
+h2 {
+  padding: 15px 0;
+  color: #444;
 }
-.addNewData{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 5px 10px;
-    color: #fff;
-    background-color: #7c3aed;
-    border: 1px solid #7c3aed;
-    border-radius: 5px;
-
+.addNewData {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #7c3aed;
+  border: 1px solid #7c3aed;
+  border-radius: 5px;
 }
