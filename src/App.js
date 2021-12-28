@@ -13,17 +13,19 @@ function App() {
 
   const addContactHandler = async (contact) => {
     try {
-      setContacts([...contacts, {id: Math.ceil(Math.random()*100), ...contact }])
-      await addOneContact(contact);
+      const {data} = await addOneContact(contact);
+      setContacts([...contacts, data])
     } catch (error) {}
   }
 
   const deleteContactHandler = async (id) => {
     try {
+      await deleteOneContact(id);
       const filteredContacts = contacts.filter((c) => c.id !== id);
       setContacts(filteredContacts);
-      await deleteOneContact(id);
-    } catch (error) {}
+    } catch (error) {
+      console.log("error...")
+    }
   }
 
   useEffect(() => {
