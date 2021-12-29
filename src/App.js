@@ -7,6 +7,7 @@ import ContactList from './components/ContactList/ContactList';
 import getContacts from './services/getContactsService';
 import deleteOneContact from './services/deleteContactService';
 import addOneContact from './services/addContactService';
+import EditContact from './components/EditContact/EditContact';
 
 function App() {
   const[contacts, setContacts] = useState([]);
@@ -42,10 +43,8 @@ function App() {
     <main className="App">
       <h1>Contact App</h1>
       <Switch>
-        <Route 
-           path="/user/:id" 
-           component={ContactDetail}
-        />
+        <Route path="/edit/:id" component={EditContact}/>
+        <Route path="/user/:id" component={ContactDetail}/>
         <Route 
            path="/add" 
            render={(props) =>(
