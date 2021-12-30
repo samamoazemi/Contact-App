@@ -3,7 +3,7 @@ import { useEffect } from "react/cjs/react.development";
 import style from "./EditContact.module.css";
 import getOneContact from "../../services/getOneContact";
 
-const EditContact = ({addContactHandler, history, match}) => {
+const EditContact = ({editContactHandler, history, match}) => {
     const[contact, setContact] = useState({name: "", email:""});
 
     const changeHandler = (e) => {
@@ -16,7 +16,7 @@ const EditContact = ({addContactHandler, history, match}) => {
             return;
         }
         e.preventDefault();
-        addContactHandler(contact)
+        editContactHandler(contact, match.params.id)
         setContact({name: "", email: ""});
         history.push("/");
     }
@@ -51,7 +51,7 @@ const EditContact = ({addContactHandler, history, match}) => {
                   onChange={changeHandler}
                 />
             </div>
-            <button className={style.addContact} type="submit">Edit Contact</button>
+            <button className={style.addContact} type="submit">Update Contact</button>
         </form>
      );
 }
