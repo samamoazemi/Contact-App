@@ -1,22 +1,26 @@
 import { useState } from "react";
+import addOneContact from "../../services/addContactService";
 import style from "./AddContact.module.css";
 
-const AddContact = ({addContactHandler, history}) => {
+const AddContact = ({history}) => {
     const[contact, setContact] = useState({name: "", email:""});
 
     const changeHandler = (e) => {
         setContact({...contact,[e.target.name]: e.target.value})
     }
 
-    const submitForm = (e) => {
+    const submitForm = async (e) => {
         if(!contact.name || !contact.email){
             alert("all fields are mandatory !");
             return;
         }
         e.preventDefault();
-        addContactHandler(contact)
-        setContact({name: "", email: ""});
-        history.push("/");
+
+        try {
+            await addOneContact(contact);
+            setContact({name: "", email: ""});
+            history.push("/");
+          } catch (error) {}
     }
     
     return ( 
