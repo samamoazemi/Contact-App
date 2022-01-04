@@ -9,15 +9,18 @@
     border-radius: 5px;
     margin-top: 20px;
     padding: 20px 20px;
-    background-color: #f5f3ff;
+    background-color: #f1f5f9;
 }
 .contactDetail button{
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 4px 12px;
+    padding: 6px 20px;
     color: #fff;
-    background-color: #7c3aed;
-    border: 1px solid #7c3aed;
+    background: linear-gradient(90deg,
+    rgba(121, 113, 236, 1) 0%,
+    rgba(142, 142, 255, 1) 50%,
+    rgba(104, 177, 251, 1) 80%,
+    rgba(32, 217, 255, 1) 100%);
     border-radius: 5px;
 }

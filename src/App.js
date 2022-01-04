@@ -9,7 +9,7 @@ function App() {
  
   return (
     <main className="App">
-      <h1>Contact App</h1>
+      {/* <h1>Contact App</h1> */}
       <Switch>
         <Route path="/edit/:id" component={EditContact}/>
         <Route path="/user/:id" component={ContactDetail}/>

@@ -4,6 +4,7 @@ import deleteOneContact from "../../services/deleteContactService";
 import getContacts from "../../services/getContactsService";
 import Contact from "./Contact/Contact";
 import style from "./ContactList.module.css";
+import { FaUserPlus } from "react-icons/fa";
 
 const ContactList = (props) => {
 
@@ -49,19 +50,27 @@ const ContactList = (props) => {
     }
 
     return (
-        <section>
-          <div className={style.listHeader}>
-            <h2>Contact List</h2>
+        <section className={style.mainWrapApp}>
+         <div className={style.header}>
+           <div className={style.listHeader}>
+            <h3>Contact List</h3>
+            <div className={style.searchContacts}>
+             <input 
+               type="text" 
+               value={searchTerm} 
+               onChange={searchHandler} 
+               placeholder="search" />
+            </div>
             <Link to="/Add">
-            <button className={style.addNewData}>Add</button>
+             <button className={style.addNewData}><FaUserPlus/></button>
             </Link>
-          </div>
-          <div>
-            <input type="text" value={searchTerm} onChange={searchHandler} />
-          </div>
-          {contacts ? contacts.map((contact) => {
+           </div>
+         </div>
+         <div className={style.contactsWrap}>
+         {contacts ? contacts.map((contact) => {
               return <Contact contact={contact} onDelete={deleteContactHandler} />;
           }) : <p>Loading ...</p>}
+         </div>
         </section>
     );
 }

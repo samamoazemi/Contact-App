@@ -1,14 +1,39 @@
+.mainWrapApp {
+  height: 100vh;
+  padding: 40px 0;
+}
 .listHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
-  margin-top: 20px;
-  width: 30rem;
+  padding: 0 30px;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg,
+    rgba(121, 113, 236, 1) 0%,
+    rgba(142, 142, 255, 1) 50%,
+    rgba(104, 177, 251, 1) 80%,
+    rgba(32, 217, 255, 1) 100%
+  );
+  border-radius: 10px 10px 0 0;
 }
-h2 {
+.contactsWrap {
+  height: 74vh;
+  overflow-y: auto;
+}
+.contactsWrap::-webkit-scrollbar {
+  width: 6px;
+}
+.contactsWrap::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.contactsWrap::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+}
+h3 {
   padding: 15px 0;
-  color: #444;
+  color: rgb(255, 255, 255);
 }
 .addNewData {
   cursor: pointer;
@@ -16,7 +41,17 @@ h2 {
   outline: none;
   padding: 5px 10px;
   color: #fff;
-  background-color: #7c3aed;
-  border: 1px solid #7c3aed;
+  background-color: inherit;
+  font-size: 25px;
   border-radius: 5px;
+}
+.header {
+  display: flex;
+}
+.searchContacts input {
+  border-radius: 40px;
+  border: none;
+  height: 25px;
+  padding: 5px 10px;
+  margin-left: 4rem;
 }

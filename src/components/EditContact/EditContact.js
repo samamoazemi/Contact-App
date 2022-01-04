@@ -35,7 +35,7 @@ const EditContact = ({ history, match }) => {
     },[])
     
     return ( 
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} className={style.editData}>
             <div className={style.formControl}>
                 <label>name</label>
                 <input 
