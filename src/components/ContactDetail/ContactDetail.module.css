@@ -1,26 +1,54 @@
+.editSection{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerDetail{
+    height: 8rem;
+    background-color: #e5e7eb77;
+    border-radius: 10px 10px 0px 0px;
+}
 .contactDetail{
-    width: 26rem;
-    height: 150px;
+    width: 20rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
     padding: 20px 20px;
-    background-color: #f1f5f9;
+    background-color: #f9fafb;
+    border-radius: 0px 0px 10px 10px;
+}
+.contactDetail p{
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    width: 260px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 .contactDetail button{
     cursor: pointer;
     border: none;
     outline: none;
     padding: 6px 20px;
+    margin-top: 10px;
     color: #fff;
     background: linear-gradient(90deg,
     rgba(121, 113, 236, 1) 0%,
     rgba(142, 142, 255, 1) 50%,
     rgba(104, 177, 251, 1) 80%,
     rgba(32, 217, 255, 1) 100%);
-    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.imgProfile{
+   width: 70px;
+   height: 70px;
+   margin-top: 90px;
+   border: 3px solid white;
+   border-radius: 50%
 }

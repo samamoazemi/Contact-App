@@ -20,6 +20,7 @@
 .contactsWrap {
   height: 74vh;
   overflow-y: auto;
+  border-radius: 0px 0px 10px 10px;
 }
 .contactsWrap::-webkit-scrollbar {
   width: 6px;

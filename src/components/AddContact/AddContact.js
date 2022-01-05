@@ -24,27 +24,30 @@ const AddContact = ({history}) => {
     }
     
     return ( 
-            <form onSubmit={submitForm} className={style.addData}>
+            <section className={style.addSection}>
+               <form onSubmit={submitForm} className={style.addData}>
+                  <h2 className={style.addtitle}>New Contact</h2>
                  <div className={style.formControl}>
-                    <label>name</label>
                     <input 
                        type="text" 
                        name="name" 
                        value={contact.name} 
                        onChange={changeHandler}
+                       placeholder="name"
                     />
                  </div>
                  <div className={style.formControl}>
-                    <label>email</label>
                     <input 
                        type="text" 
                        name="email" 
                        value={contact.email} 
                        onChange={changeHandler}
+                       placeholder="email"
                     />
                  </div>
                  <button className={style.addContact} type="submit">Add Contact</button>
-            </form>
+              </form>
+            </section>
      );
 }
  

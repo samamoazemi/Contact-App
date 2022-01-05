@@ -1,15 +1,24 @@
+import { useReducer } from "react";
 import { Link } from "react-router-dom";
 import style from "./ContactDetail.module.css";
+import userProfile from "../ContactDetail/photos/user.png";
 
 const ContactDetail = ({location}) => {
     const {contact} = location.state;
     // console.log(props.location.state.contact);
     return ( 
-        <div className={style.contactDetail}>
-            <p> user name is : {contact.name} </p>
-            <p> user email is : {contact.email} </p>
-            <Link to="/"><button>contact list</button></Link>
-        </div>
+        <section className={style.editSection}>
+           <div>
+              <div className={style.headerDetail}>
+                <div> <img src={userProfile} className={style.imgProfile}/> </div>
+              </div>
+              <div className={style.contactDetail}>
+                <p> {contact.name} </p>
+                <p> {contact.email} </p>
+              <Link to="/"><button>Contact List</button></Link>
+              </div>
+              </div>
+        </section>
      );
 }
  

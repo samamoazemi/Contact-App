@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 import style from "./EditContact.module.css";
 import getOneContact from "../../services/getOneContact";
-import getContacts from "../../services/getContactsService";
 import updateContact from "../../services/updateContact";
 
 const EditContact = ({ history, match }) => {
@@ -34,28 +33,29 @@ const EditContact = ({ history, match }) => {
         localFetch();
     },[])
     
-    return ( 
-        <form onSubmit={submitForm} className={style.editData}>
-            <div className={style.formControl}>
-                <label>name</label>
+    return (    
+        <section className={style.editSection}>
+         <form onSubmit={submitForm} className={style.editData}>
+          <div className={style.formControl}>
                 <input 
                   type="text" 
                   name="name" 
                   value={contact.name} 
-                  onChange={changeHandler}
+                  placeholder="name"
                 />
             </div>
             <div className={style.formControl}>
-                <label>email</label>
                 <input 
                   type="text" 
                   name="email" 
                   value={contact.email} 
                   onChange={changeHandler}
+                  placeholder="email"
                 />
             </div>
-            <button className={style.addContact} type="submit">Update Contact</button>
-        </form>
+            <button className={style.editContact} type="submit">Update Contact</button>
+         </form>
+        </section>
      );
 }
  
