@@ -10,8 +10,8 @@
     border-radius: 10px 10px 0px 0px;
 }
 .contactDetail{
-    width: 20rem;
-    height: 15rem;
+    width: 30rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,10 +21,10 @@
     border-radius: 0px 0px 10px 10px;
 }
 .contactDetail p{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border: 1px solid #ccc;
-    width: 260px;
-    height: 30px;
+    width: 23rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,8 +34,10 @@
     cursor: pointer;
     border: none;
     outline: none;
+    width: 10rem;
+    height: 35px;
     padding: 6px 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     color: #fff;
     background: linear-gradient(90deg,
     rgba(121, 113, 236, 1) 0%,
@@ -43,12 +45,12 @@
     rgba(104, 177, 251, 1) 80%,
     rgba(32, 217, 255, 1) 100%);
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 15px;
 }
 .imgProfile{
-   width: 70px;
-   height: 70px;
-   margin-top: 90px;
+   width: 75px;
+   height: 75px;
+   margin-top: 88px;
    border: 3px solid white;
    border-radius: 50%
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { Link } from "react-router-dom";
 import deleteOneContact from "../../services/deleteContactService";
 import getContacts from "../../services/getContactsService";
@@ -51,7 +51,7 @@ const ContactList = (props) => {
 
     return (
         <section className={style.mainWrapApp}>
-         <div className={style.header}>
+          <div className={style.header}>
            <div className={style.listHeader}>
             <h3>Contact List</h3>
             <div className={style.searchContacts}>
@@ -68,8 +68,11 @@ const ContactList = (props) => {
          </div>
          <div className={style.contactsWrap}>
          {contacts ? contacts.map((contact) => {
-              return <Contact contact={contact} onDelete={deleteContactHandler} />;
-          }) : <p>Loading ...</p>}
+              return( 
+              <Contact contact={contact} onDelete={deleteContactHandler} />
+              );
+          }) : <p className={style.loadPart}>Loading ...</p>}
+         
          </div>
         </section>
     );
