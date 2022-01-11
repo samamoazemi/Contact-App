@@ -1,56 +1,95 @@
-.editSection{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.editSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.headerDetail{
-    height: 8rem;
-    background-color: #e5e7eb77;
-    border-radius: 10px 10px 0px 0px;
+.details {
+  width: 100%;
 }
-.contactDetail{
-    width: 30rem;
-    height: 22rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px;
-    background-color: #f9fafb;
-    border-radius: 0px 0px 10px 10px;
+.headerDetail {
+  height: 8rem;
+  background-color: #e5e7eb77;
+  border-radius: 10px 10px 0px 0px;
 }
-.contactDetail p{
-    margin-bottom: 30px;
-    border: 1px solid #ccc;
-    width: 23rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+.contactDetail {
+  width: 30rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  background-color: #f9fafb;
+  border-radius: 0px 0px 10px 10px;
 }
-.contactDetail button{
-    cursor: pointer;
-    border: none;
-    outline: none;
-    width: 10rem;
-    height: 35px;
-    padding: 6px 20px;
-    margin-top: 20px;
-    color: #fff;
-    background: linear-gradient(90deg,
+.contactDetail p {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  width: 90%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.contactDetail button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 10rem;
+  height: 35px;
+  padding: 6px 20px;
+  margin-top: 20px;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
     rgba(121, 113, 236, 1) 0%,
     rgba(142, 142, 255, 1) 50%,
     rgba(104, 177, 251, 1) 80%,
-    rgba(32, 217, 255, 1) 100%);
-    border-radius: 20px;
-    font-size: 15px;
+    rgba(32, 217, 255, 1) 100%
+  );
+  border-radius: 20px;
+  font-size: 15px;
 }
-.imgProfile{
-   width: 75px;
-   height: 75px;
-   margin-top: 88px;
-   border: 3px solid white;
-   border-radius: 50%
+.imgProfile {
+  width: 75px;
+  height: 75px;
+  margin-top: 88px;
+  border: 3px solid white;
+  border-radius: 50%;
 }
+
+@media only screen and (max-width: 768px) {
+  .editSection {
+    width: 90%;
+  }
+  .headerDetail {
+    height: 11vh;
+    position: relative;
+  }
+  .contactDetail {
+    width: 100%;
+    height: 29vh;
+    padding: 20px 20px 0;
+  }
+  .contactDetail p {
+    margin-bottom: 20px;
+    height: 2.5rem;
+  }
+  .contactDetail button {
+    margin-top: 5px;
+    width: 9rem;
+    height: 32px;
+  }
+  .imgProfile {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 72px;
+    height: 72px;
+  }
+}
+/* background-color: #e5e7eb77; */

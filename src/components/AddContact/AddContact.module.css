@@ -24,7 +24,7 @@
     background: linear-gradient(to right, rgb(92, 82, 221) 0%, rgb(36, 196, 228) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 15px;
+    margin-bottom: 14px;
     font-size: 26px;
 }
    
@@ -36,6 +36,7 @@
     width: 20rem;
     height: 2.5rem;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 .formControl input:focus{
     border: 2px solid #7c3aed;
@@ -44,8 +45,8 @@
     cursor: pointer;
     border: none;
     outline: none;
-    width: 10rem;
-    height: 33px;
+    width: 9rem;
+    height: 32px;
     padding: 6px 20px;
     margin-top: 30px;
     color: #fff;
@@ -56,4 +57,31 @@
     rgba(32, 217, 255, 1) 100%);
     border-radius: 20px;
     font-size: 14px
+}
+
+@media only screen and (max-width: 768px){
+
+    .addSection{
+        width: 100%;
+    }
+    .addData {
+        width: 90%;
+        height: 40vh;
+    }
+    .formControl input {
+        margin: 5px 40px;
+        width: 16rem;
+    }
+    .formControl input:focus{
+        border: 1px solid #7c3aed;
+    }
+    .addtitle{
+        font-size: 24px;
+        margin: 2px;
+    }
+    .addContact{
+        width: 9rem;
+        height: 32px;
+        font-size: ;
+    }
 }

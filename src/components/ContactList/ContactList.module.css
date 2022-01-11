@@ -40,16 +40,15 @@
 h3 {
   padding: 15px 0;
   color: rgb(255, 255, 255);
+  margin-left: 5px;
 }
 .addNewData {
   cursor: pointer;
   border: none;
   outline: none;
-  padding: 5px 10px;
   color: #fff;
   background-color: inherit;
   font-size: 25px;
-  border-radius: 5px;
 }
 .header {
   display: flex;
@@ -63,7 +62,7 @@ h3 {
   margin-left: 4rem;
   outline: none;
 }
-.searchContacts input:focus{
+.searchContacts input:focus {
   outline: 2px solid rgb(190, 190, 190);
 }
 .loadPart {
@@ -77,3 +76,50 @@ h3 {
   background-color: #fff;
 }
 
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 13vh;
+  }
+  .mainWrapApp {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+  .searchContacts input {
+    margin-left: 2rem;
+  }
+  .listHeader {
+    height: 100%;
+  }
+  .contactsWrap {
+    height: 87vh;
+    background-color: #f9fafb;
+  }
+  .mainWrapApp {
+    border-radius: 0px;
+  }
+  .listHeader {
+    border-radius: 0px;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 7px;
+  }
+  .contactsWrap {
+    border-radius: 0px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .searchContacts input {
+    width: 82%;
+    height: 30px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .addNewData {
+    margin-top: 10px;
+  }
+}

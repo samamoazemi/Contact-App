@@ -8,9 +8,9 @@ const ContactDetail = ({location}) => {
     // console.log(props.location.state.contact);
     return ( 
         <section className={style.editSection}>
-           <div>
+           <div className={style.details}>
               <div className={style.headerDetail}>
-                <div> <img src={userProfile} className={style.imgProfile}/> </div>
+                <div>  <img src={userProfile} className={style.imgProfile}/>  </div>
               </div>
               <div className={style.contactDetail}>
                 <p> {contact.name} </p>

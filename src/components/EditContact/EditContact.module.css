@@ -29,6 +29,7 @@
     height: 2.5rem;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 14px;
 }
 .formControl input:focus{
     border: 2px solid #7c3aed;
@@ -37,8 +38,8 @@
     cursor: pointer;
     border: none;
     outline: none;
-    width: 10rem;
-    height: 33px;
+    width: 9rem;
+    height: 32px;
     padding: 6px 20px;
     margin-top: 30px;
     color: #fff;
@@ -49,4 +50,26 @@
     rgba(32, 217, 255, 1) 100%);
     border-radius: 20px;
     font-size: 14px
+}
+
+@media only screen and (max-width: 768px){
+    .editSection {
+        width: 100%;
+    }
+    .editData {
+        width: 90%;
+        height: 40vh;
+    }
+    .formControl input {
+        width: 17rem;
+    }
+    .editContact{
+        width: 8rem;
+        height: 30px;
+        font-size: 12px;
+    }
+
+}
+@media only screen and (max-width: 360px){
+
 }
